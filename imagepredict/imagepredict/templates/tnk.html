@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% comment %} <dl>
+        <dt>{{}}</dt>
+        <dd>{{}}</dd>
+    </dl> {% endcomment %}
+    <h1>{{label}}</h1>
+    <dl>
+        {% for key,values in data.items %}
+        <dt>{{key}}</dt>
+        <ul>
+        {% for value in values %}
+        <li>{{value}}</li>
+        {% endfor %}
+    </ul>
+        {% endfor %}
+    </dl>
+    
+</body>
+</html>

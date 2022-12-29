@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}<link rel="stylesheet" href="{% static 'leaf.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap"
+        rel="stylesheet"> -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Maghfirea:wght@400&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;600&display=swap" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <title>Leaf Classification</title>
+</head> 
+<body data-bs-spy="scroll">
+
+    <!-- home section  -->
+
+    <section id="header" data-aos="zoom-in" data-aos-duration="700">
+        <nav class="navbar">
+           {% load static %} <a href="leaf.html"><img src="{% static 'img/iconpng.png' %}" data-aos="fade-down" data-aos-delay="300" data-aos-duration="700"></a>
+            <div class="nav-links" id="navLinks">
+
+                <ul>
+                    <li data-aos="fade-down" data-aos-delay="500" data-aos-duration="600"><a href="#header">HOME</a></li>
+                    <li data-aos="fade-down" data-aos-delay="600" data-aos-duration="600"><a href="#about">ABOUT</a></li>
+                    <li data-aos="fade-down" data-aos-delay="700" data-aos-duration="600"><a href="#feature">FEATURES</a></li>
+                    <li data-aos="fade-down" data-aos-delay="800" data-aos-duration="600"><a href="#fotter">CONTACT</a></li>
+
+                </ul>
+            </div>
+
+        </nav>
+
+       {% load static %} <img src="{% static 'img/home-img1.png' %}" class="feature-img" data-aos="fade-right" data-aos-delay="900" data-aos-duration="700">
+        <div class="content">
+            <h1 data-aos="fade-up" data-aos-delay="1000" data-aos-duration="1000">Make your crop<br>free from disease and<br>pests.</h1>
+            <p data-aos="fade-up" data-aos-delay="1100" data-aos-duration="1000">Test your crop by your own, just click the button, upload it and get an effective solution.</p>
+            <a href="/test" class="btn" data-aos="fade-up"
+            data-aos-anchor-placement="top-bottom" data-aos-delay="1200" data-aos-duration="1000">Test your image</a>
+        </div>
+        {% load static %}<img src="{% static 'img/home_img.png' %}" class="feature-img1" data-aos="fade-up" data-aos-delay="900" data-aos-duration="500">
+    </section>
+
+
+    <!-- About section -->
+
+    <section id="about"  data-aos="zoom-in"  data-aos-duration="700">
+        <div class="about-left-col" data-aos="fade-right" data-aos-delay="700" data-aos-duration="700">
+            {% load static %}<img src="{% static 'img/about-img.png' %}">
+        </div>
+        <div class="about-right-col">
+            <div class="about-text">
+                <h1 data-aos="fade-left" data-aos-delay="700" data-aos-duration="700">About Us</h1>
+
+                <p data-aos="fade-up" data-aos-delay="800" data-aos-duration="1000">Food safety plays a major roll in countries progress, due to lack of infrastructure farmers are not able to diagnose or test their crop. 
+                    Diagnose your crop Our web application will provide a platform where farmers can upload image of infected plants, leaves or fruit. Our deep learning neural model will Identify the disease and then provide the effective solution in terms of medicine, methods, pesticide, and fertiliser, with description in the form of audio and text information.
+                    which reduces the risk of the whole crop getting affected by the disease if it is cured in early-stages.
+                </p><br><br>
+
+                <h2 data-aos="fade-up" data-aos-delay="900" data-aos-duration="1000">"The heathy crop makes the whole country feed on it,so its heath is not your responsibility but our also."</h2>
+                {% comment %} <h3 data-aos="fade-up" data-aos-delay="900" data-aos-duration="1000">---Abigail Adams</h3> {% endcomment %}
+            </div>
+        </div>
+    </section>
+
+
+    <!-- feature section -->
+
+    <section id="feature" data-aos="zoom-in"  data-aos-duration="700">
+
+        <div class="about-left-col">
+            <div class="feature-text">
+                <h2 data-aos="fade-right" data-aos-delay="700" data-aos-duration="700">Features Are</h2>
+                <ul>
+                    <li data-aos="fade-up" data-aos-delay="750" data-aos-duration="800">Diagnose your crop by simply clicking image 
+                        and uploading image.</li>
+                    <li data-aos="fade-up" data-aos-delay="800" data-aos-duration="800">Detection of pest and disease.</li>
+                    <li data-aos="fade-up" data-aos-delay="850" data-aos-duration="800">Get a regular health check of your crop by doing this practice regularly.</li>
+                    <li data-aos="fade-up" data-aos-delay="900" data-aos-duration="800">Get the information related to your crop ,about growth ,about correct measures, symptoms of plants disease and it's treatment.</li>
+                    <li data-aos="fade-up" data-aos-delay="950" data-aos-duration="800">Get a solution in terms of medicine, fertilizer and method.</li>
+                    <li data-aos="fade-up" data-aos-delay="1000" data-aos-duration="800">It will contribute maintain health of your crop and increase the overall yeild</li>
+                </ul>
+            </div>
+        </div>
+        <div class="about-right" data-aos="fade-left" data-aos-delay="700" data-aos-duration="700">
+          {% load static %}  <img src="{% static 'img/feature-img.png' %}">
+        </div>
+
+    </section>
+
+
+    <!-- fotter section -->
+
+    <section id="fotter" data-aos="zoom-in"  data-aos-duration="700">
+
+        <div class="title-text" data-aos="fade-down" data-aos-delay="600" data-aos-duration="600">
+            <p>CONTACT</p>
+
+        </div>
+        <div class="footer-row">
+            <div class="footer-left">
+                <h1 data-aos="fade-right" data-aos-delay="700" data-aos-duration="700">Opening Hours</h1>
+                <p data-aos="fade-up" data-aos-delay="800" data-aos-duration="700"><i class="fa fa-clock-o"></i>Monday to Friday - 9am to 9pm</p>
+                <p data-aos="fade-up" data-aos-delay="900" data-aos-duration="700"><i class="fa fa-clock-o"></i>Saturday and Sunday - 8am to 11pm</p>
+            </div>
+            <div class="footer-right">
+                <h1 data-aos="fade-left" data-aos-delay="700" data-aos-duration="700">Get In Touch</h1>
+                <p data-aos="fade-up" data-aos-delay="800" data-aos-duration="700">#30 abc Colony, xyz City IN<i class="fa fa-map-marker"></i></p>
+                <p data-aos="fade-up" data-aos-delay="900" data-aos-duration="700">leaf@website.com<i class="fa fa-paper-plane"></i></p>
+                <p data-aos="fade-up" data-aos-delay="1000" data-aos-duration="700">+01 123456789<i class="fa fa-phone"></i></p>
+            </div>
+        </div>
+
+        <div class="social-links">
+            <i class="fa fa-github" data-aos="fade-up" data-aos-delay="1100" data-aos-duration="700"></i>
+            <i class="fa fa-linkedin" data-aos="fade-up" data-aos-delay="1200" data-aos-duration="700"></i>
+            <i class="fa fa-twitter" data-aos="fade-up" data-aos-delay="1300" data-aos-duration="700"></i>
+            <i class="fa fa-youtube-play" data-aos="fade-up" data-aos-delay="1400" data-aos-duration="700"></i>
+            <p data-aos="fade-up" data-aos-delay="1500" data-aos-duration="700">Copyright 2022</p>
+        </div>
+
+    </section>
+
+
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
+
+    <script>history.scrollRestoration = "manual"</script>
+</body>
+
+</html>

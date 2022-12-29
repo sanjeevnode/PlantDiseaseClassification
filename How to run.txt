@@ -1,0 +1,8 @@
+1. Go to : imagepredict\imagepredict\ 
+directory 
+2.open command prompt in that directory and type followng command :>
+	i> pip install -r requirements.txt
+	ii> puthon manage.py runserver
+3.After this ,open a web browser and type the folowing address :>
+	:> http://127.0.0.1:8000/
+4.Now your project is running

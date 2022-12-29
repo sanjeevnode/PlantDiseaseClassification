@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap"
+        rel="stylesheet"> -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Maghfirea:wght@400&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;600&display=swap" />
+
+    <title>Classification</title>
+    {% load static %}<link rel="stylesheet" href="{% static 'classification.css' %}">
+
+</head>
+
+<body>
+    <section id="header">
+        <nav>
+            <a href="\">{% load static %}<img src="{% static 'img\iconpng.png' %}"></a>
+            <div class="nav-links" id="navLinks">
+
+                <ul>
+                    <li><a href="\">HOME</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="headline">
+            <h1>Classifiy your image</h1>
+        </div>
+
+        <div class="row">
+            <div class="column left" ">
+                <img src={{img_path}}>
+                <br><br>
+                <form action="/test" method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <input type="file" name="imagepath" id="imagepath" class="uplodefile">
+                    
+                    <br><br>
+                    <button type="submit"  class="subbtn">Check</button>
+                </form>
+            </div>
+            <div class="column right">
+                <h2 style ="text-align: center;">{{label}}</h2>
+                <ul>
+                    {% for key,values in treatment.items %}
+                    <h3>{{key}}</h3>
+                    {% for value in values %}
+                    <li>{{value}}</li>
+                    {% endfor %}
+                
+                    {% endfor %}
+                </ul>
+                {% if label %}
+                    <a href="{{readmores}}">Read more</a>
+                {% endif %}
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
